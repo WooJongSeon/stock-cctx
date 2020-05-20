@@ -6,3 +6,7 @@ const data = {
 const fff = {
 
 }
+
+export const hello = () => {
+  console.log('hello');
+}
