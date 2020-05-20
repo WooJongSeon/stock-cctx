@@ -1,6 +1,6 @@
 {
   "name": "stock-cctx",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "stock cctx",
   "main": "index.js",
   "scripts": {
