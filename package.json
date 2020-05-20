@@ -4,12 +4,18 @@
   "description": "stock cctx",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clean && tsc",
-    "clean": "rimraf dist",
-    "lint": "tslint -c tslint.json -p tsconfig.json",
-    "test:unit": "npx jest --clearCache && npx jest --detectOpenHandles --verbose --runInBand --forceExit",
-    "test:unit:specific": "npx jest tests/dataProcessing.spec.ts --detectOpenHandles --verbose --runInBand --forceExit",
-    "test:coverage": "npx jest --coverage --detectOpenHandles --runInBand --forceExit"
+    "clean": "npx rimraf dist/*",
+    "lint": "npx tslint -c tslint.json -p tsconfig.json",
+    "tsc": "npx tsc",
+    "build": "npx npm-run-all clean lint tsc",
+    "start": "node ./bin/www",
+    "dev:start": "npx npm-run-all build start",
+    "dev": "npx nodemon",
+    "watch": "npm run dev",
+    "test": "npx jest",
+    "test:watch": "npx jest --watch",
+    "test:watch-specific": "npx jest test/integration/quotation/list.spec.ts --watch",
+    "coverage": "npx jest --coverage"
   },
   "author": "jswoo",
   "license": "ISC"
