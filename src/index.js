@@ -1,4 +1,18 @@
-
-const execSync = require('child_process').execSync;
-const output = execSync('source sedsh.sh', { encoding: 'utf-8' }); // the default is 'buffer'
-console.log('Output was:\n', output);
+export const hello = () => {
+    console.log('hello');
+}
+export const hi = () => {
+    console.log('hi');
+}
+export const adf = () => {
+    console.log('hello');
+}
+export const asdfllo = () => {
+    console.log('hello');
+}
+export const hgfo = () => {
+    console.log('hello');
+}
+export const hsgf = () => {
+    console.log('hello');
+}
